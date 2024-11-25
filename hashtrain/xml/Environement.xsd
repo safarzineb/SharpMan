@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema version="1.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.ujf-grenoble.fr/l3miage/sharpman"
+        xmlns:sharp="http://www.ujf-grenoble.fr/l3miage/sharpman"
+        elementFormDefault="qualified">
+
+    <xs:element name="environnement" type="sharp:Environnement">
+        <name="env" type="sharp:Environnement">
+            <xs:element name="terrain" type="sharp:Terrain"/>
+            <xs:element name="score" type="sharp:Score"/>
+    </xs:element>
+    
+    
+    
+    <!--Terrain (2D)-->
+    
+    <xs:complexType name="terrain" type="sharp:Terrain">
+        <!-- case [][]-->
+        <xs:element name = "maxLenght" type="xs:int"/>
+        <xs:element name = "maxWidth" type="xs:int"/>
+        <xs:element name = "coinNbr" type="xs:int"/>
+                
+    </xs:complexType>
+    
+    <!--Enum typecase-->
+    <xs:simpleType name="typeCase">
+        <xs:enumeration value="VIDE"/>
+        <xs:enumeration value="MUR"/>
+        <xs:enumeration value="JAVA"/>
+        <xs:enumeration value="SHARPMAN"/>
+        <xs:enumeration value="PLUS"/>
+        <xs:enumeration value="HASHTAG"/>
+        <xs:enumeration value="CHERRY"/>
+    </xs:simpleType>
+    
+    <!-- complexe type Joueur  -->
+
+    <!-- complexe type Fantomes  -->
+
+    <!-- simple type Position  -->
+
+    <!-- enum  game state : maybe only in the c# ?? -->
+
+    <!-- enum   -->
+    
+</xs:schema>
